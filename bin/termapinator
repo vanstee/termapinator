@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'termapinator'
+
+query = ARGV.join(' ')
+Termapinator.run(query)

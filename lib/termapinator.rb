@@ -1,5 +1,7 @@
-require "termapinator/version"
+require 'termapinator/version'
 
 module Termapinator
-  # Your code goes here...
+  def self.run(query)
+    puts "Searching for #{query}"
+  end
 end
