@@ -1,29 +1,24 @@
 # Termapinator
 
-TODO: Write a gem description
+Hai! Do you like maps... in your terminal?!
 
-## Installation
+Try this:
 
-Add this line to your application's Gemfile:
+```bash
+gem install termapinator
+termapinator "Somewhere in Hawaii"
+```
 
-    gem 'termapinator'
+![Hai I'm Hawaii](http://i.imgur.com/teHpkhw.png)
 
-And then execute:
+![Mind blown](http://www.trollmystic.com/music/wp-content/uploads/2012/10/f97d033e87ca.gif)
 
-    $ bundle
+Also you can zoom:
 
-Or install it yourself as:
+```bash
+termapinator "Statue of Liberty" --zoom 18
+# 0   = entire world
+# 21+ = individual buildings
+```
 
-    $ gem install termapinator
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+<3
