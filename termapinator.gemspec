@@ -7,10 +7,10 @@ Gem::Specification.new do |gem|
   gem.name          = "termapinator"
   gem.version       = Termapinator::VERSION
   gem.authors       = ["vanstee"]
-  gem.email         = ["vanstee@highgroove.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.email         = ["patrick@vanstee.me"]
+  gem.description   = %q{Convert google maps to ascii for great fun! :zap: :boom: :heart:}
+  gem.summary       = %q{Convert google maps to ascii for great fun!}
+  gem.homepage      = "https://github.com/vanstee/termapinator"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
