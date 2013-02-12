@@ -19,4 +19,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'chunky_png'
   gem.add_dependency 'rainbow'
+
+  gem.add_development_dependency 'rake'
 end
