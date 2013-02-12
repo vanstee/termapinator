@@ -1,6 +1,21 @@
 #!/usr/bin/env ruby
 
 require 'termapinator'
+require 'optparse'
 
-query = ARGV.join(' ')
-Termapinator.run(query)
+options = {}
+
+optparse = OptionParser.new do |o|
+  o.banner = 'Usage: termapinator QUERY [OPTIONS]'
+
+  o.on('-z', '--zoom ZOOM', 'zoom level of image') do |zoom|
+    options[:zoom] = zoom
+  end
+end
+
+optparse.parse!
+
+query = ARGV.first
+options[:center] = query
+
+Termapinator.run(options)

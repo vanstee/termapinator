@@ -4,27 +4,28 @@ require 'termapinator/version'
 require 'open-uri'
 require 'chunky_png'
 require 'rainbow'
+require 'optparse'
 
 module Termapinator
-  def self.run(query)
-    image = load_image(google_maps_request(query))
+  DEFAULT_OPTIONS = {
+      size: '640x640',
+      sensor: true,
+      style: 'element:labels|visibility:off'
+  }
+
+  def self.run(options)
+    image = load_image(google_maps_request(options))
     ascii = image_to_ascii(image)
     puts ascii
   end
 
-  def self.google_maps_request(query)
-    params = {
-      center: query,
-      size: '640x640',
-      sensor: true,
-      style: 'element:labels|visibility:off',
-      zoom: 15
-    }
-
+  def self.google_maps_request(options)
     uri = URI.parse("http://maps.googleapis.com/maps/api/staticmap")
+    params = DEFAULT_OPTIONS.merge(options)
     uri.query = params.map { |k, v| "#{k}=#{URI.escape(v.to_s)}" }.join('&')
     uri
   end
+
 
   def self.load_image(url)
     image = nil
